@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 
+
 from django.conf.urls import url
 from django.contrib import admin
 
@@ -26,4 +27,6 @@ urlpatterns = [
     url(r'^detalle/(?P<object_id>\d+)/$', views.detalle_libro, name='detalle'),
     url(r'^detalle/(?P<slug>[\w-]+)/$', views.detalle_s, name='detalle_s'),
     url(r'^detalle/(?P<slug>[\w-]+)/$', views.detalle_slug, name='detalle_slug'),
+    url(r'^crear_libro/$', views.agregar_libro, name='nuevo_libro'),
 ]
+
